@@ -147,13 +147,13 @@ print("distance entre A et B est : ",result)
 
 
 import turtle
-wn=turtle.Screen()
-wn.bgcolor("blue")
-wn.setup(width-800 , height-600)
-wn.tracer(800) 
+window =turtle.Screen()
+window.bgcolor("green")
+window.setup(width-800 , height-600)
+window.tracer(800) 
 for i in range(120, 140, 10):
     turtle.circle(i,360)
 while True:
-    wn.update() 
+    window.update() 
  
     
