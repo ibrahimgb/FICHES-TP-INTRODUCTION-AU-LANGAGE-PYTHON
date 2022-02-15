@@ -40,11 +40,12 @@ print("a / b = "+ str(a/b))
 #Calculer la distance entre 2 points A(x1,y1) et B(x2,y2) e
 
 
-A = type('point', (object,  ), dict(X=16, Y=12))
-print(A.X)
+#A = type('point', (object,  ), dict(X=16, Y=12))
+#print(A.X)
 x1=int(input("enter x1 : "))
-x2=int(input("enter x2 : "))
 y1=int(input("enter y1 : "))
+
+x2=int(input("enter x2 : "))
 y2=int(input("enter y2 : "))
 
 result= ((((x2 - x1 )**2) + ((y2-y1)**2) )**0.5)
@@ -60,13 +61,14 @@ else:
 
 import math
 choise = input('Enter  1 pour disque 2 pour triangle 3 pour rectangle: ')  
-if choise == 3:
-    
-    side = 6
+print("choise : ",choise)
+
+if (choise == 3):
+    side = float(input('Enter la longer de diagonall: ')) 
     Area = side*side
     print("Aire du rectangle est:"+str(Area))    
 
-elif choise == 2:
+elif (choise == 2):
     # base et hauteur
     base = float(input('Enter la base: '))  
     hauteur = float(input('Enter hauteur: '))  
@@ -74,7 +76,7 @@ elif choise == 2:
   
     # calculate the area   
     print('Aire du triangle est: %0.2f' %area)     
-elif choise == 1:
+elif (choise == 1):
     
     R = int(input("Enter the radius of the circle: "))
     
@@ -85,10 +87,8 @@ elif choise == 1:
 # Liste des diviseurs d'un entier
 
 
-
-n = input("entrez l'entier que vous voulez obtenir ses diviseurs:")              
+n = float(input("entrez l'entier que vous voulez obtenir ses diviseurs:"))              
 root = math.ceil(math.sqrt(n))
-
 divisors = []
 
 for i in range(1, root+1):
@@ -100,14 +100,7 @@ print(divisors)
 #
 
 
-from turtle import *
-import turtle as tur
-# draw circle of radius 
-# 80 pixel  
-for i in range(120, 200):
-    tur.circle(i) 
- 
-    
+
 # Partie 3: les fonctions 
 #Exercice 1 : Palindromes, un exo pour les cracs....
 
@@ -151,3 +144,16 @@ b.y=int(input("enter y-axis de b : "))
 
 result= ((((a.x - b.x )**2) + ((a.y-b.y)**2) )**0.5)
 print("distance entre A et B est : ",result)
+
+
+import turtle
+wn=turtle.Screen()
+wn.bgcolor("blue")
+wn.setup(width-800 , height-600)
+wn.tracer(800) 
+for i in range(120, 140, 10):
+    turtle.circle(i,360)
+while True:
+    wn.update() 
+ 
+    
